@@ -19,27 +19,31 @@ final class ViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
 
-    // MARK: - Override functions
+    // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         colorView.layer.cornerRadius = 15
+        changeLabelValues(for: redSlider, label: redLabel)
+        changeLabelValues(for: greenSlider, label: greenLabel)
+        changeLabelValues(for: blueSlider, label: blueLabel)
     }
     
     // MARK: - IB Actions
-    @IBAction func redSliderAction() {
-        redLabel.text = String(format: "%.2f", redSlider.value)
+    @IBAction func slidersAction(_ sender: UISlider) {
+        switch sender {
+        case redSlider:
+            changeLabelValues(for: redSlider, label: redLabel)
+        case greenSlider:
+            changeLabelValues(for: greenSlider, label: greenLabel)
+        default:
+            changeLabelValues(for: blueSlider, label: blueLabel)
+        }
         changeColorView()
     }
-    @IBAction func greenSliderAction() {
-        greenLabel.text = String(format: "%.2f", greenSlider.value)
-        changeColorView()
-    }
-    @IBAction func blueSliderAction() {
-        blueLabel.text = String(format: "%.2f", blueSlider.value)
-        changeColorView()
-    }
-    
-    // MARK: - Private functions
+}
+
+// MARK: - Setup UI
+extension ViewController {
     private func changeColorView () {
         colorView.backgroundColor = UIColor(
             red: CGFloat(redSlider.value),
@@ -48,5 +52,8 @@ final class ViewController: UIViewController {
             alpha: 1
         )
     }
+    
+    private func changeLabelValues(for slider: UISlider, label: UILabel) {
+        label.text = String(format: "%.2f", slider.value)
+    }
 }
-
