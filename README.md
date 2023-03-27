@@ -2,6 +2,11 @@
 
 *This is a simple tutorial iOS app that allows users to change the background color of a view using sliders.*
 
+**Tech Stack**
+
+- Swift
+- UIKit
+
 **Features**
 
 - Three sliders (red, green, and blue) for adjusting the color of the background.
