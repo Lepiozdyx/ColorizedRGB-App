@@ -40,10 +40,8 @@ final class ViewController: UIViewController {
         }
         changeColorView()
     }
-}
-
-// MARK: - Setup UI
-extension ViewController {
+    
+    // MARK: - Private functions
     private func changeColorView () {
         colorView.backgroundColor = UIColor(
             red: CGFloat(redSlider.value),
