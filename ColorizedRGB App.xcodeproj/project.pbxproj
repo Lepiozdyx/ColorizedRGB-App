@@ -318,6 +318,7 @@
 				DEVELOPMENT_TEAM = 5WNGG93AJL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ColorizedRGB App/App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = ColorMixerApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -349,6 +350,7 @@
 				DEVELOPMENT_TEAM = 5WNGG93AJL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ColorizedRGB App/App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = ColorMixerApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
