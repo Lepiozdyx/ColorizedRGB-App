@@ -7,18 +7,20 @@
 
 import UIKit
 
+protocol SettingsViewControllerDelegate: AnyObject {
+    func setBackgroundColor(for color: UIColor)
+}
+
 final class ScreenViewController: UIViewController {
     
-    var backgroundColor: UIColor = .systemBackground
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = backgroundColor
+        view.backgroundColor = .systemBackground
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let settingsVC = segue.destination as? SettingsViewController else { return }
-        settingsVC.color = backgroundColor
+        settingsVC.color = view.backgroundColor
         settingsVC.delegate = self
     }
 
@@ -27,7 +29,6 @@ final class ScreenViewController: UIViewController {
 // MARK: - ScreenViewControllerDelegate
 extension ScreenViewController: SettingsViewControllerDelegate {
     func setBackgroundColor(for color: UIColor) {
-        backgroundColor = color
-        view.backgroundColor = backgroundColor
+        view.backgroundColor = color
     }
 }
