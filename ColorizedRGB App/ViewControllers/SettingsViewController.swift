@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol SettingsViewControllerDelegate: AnyObject {
-    func setBackgroundColor(for color: UIColor)
-}
-
 final class SettingsViewController: UIViewController {
     // MARK: - IB Outlets
     @IBOutlet var colorView: UIView!
@@ -52,8 +48,7 @@ final class SettingsViewController: UIViewController {
     }
     
     @IBAction func doneButtonTapped() {
-        let colorValue = getValuesFromSliders()
-        delegate.setBackgroundColor(for: colorValue)
+        delegate.setBackgroundColor(for: getValuesFromSliders())
         dismiss(animated: true)
     }
     
@@ -63,15 +58,11 @@ final class SettingsViewController: UIViewController {
     }
     
     private func setupSlidersValues() {
-        var red: CGFloat = 0
-        var green: CGFloat = 0
-        var blue: CGFloat = 0
+        let ciColor = CIColor(color: color)
         
-        color.getRed(&red, green: &green, blue: &blue, alpha: nil)
-        
-        redSlider.value = Float(red)
-        greenSlider.value = Float(green)
-        blueSlider.value = Float(blue)
+        redSlider.value = Float(ciColor.red)
+        greenSlider.value = Float(ciColor.green)
+        blueSlider.value = Float(ciColor.blue)
     }
     
     private func getValuesFromSliders() -> UIColor {
