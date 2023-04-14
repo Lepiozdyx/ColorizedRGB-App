@@ -137,17 +137,17 @@
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OaL-kN-cJI">
                                         <rect key="frame" x="0.0" y="0.0" width="46" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2ki-7n-Tvc">
                                         <rect key="frame" x="0.0" y="41" width="46" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jFn-pT-6Cy">
                                         <rect key="frame" x="0.0" y="82" width="46" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -178,11 +178,14 @@
                     <connections>
                         <outlet property="blueLabel" destination="zgV-BR-8ck" id="gf9-V7-Y1k"/>
                         <outlet property="blueSlider" destination="CD1-qI-NbC" id="jtk-P3-pFO"/>
+                        <outlet property="blueTextField" destination="jFn-pT-6Cy" id="oBw-Vm-ZDv"/>
                         <outlet property="colorView" destination="luI-Vq-Sy5" id="IeI-dT-2gv"/>
                         <outlet property="greenLabel" destination="d8J-fX-zKA" id="ZOv-wm-mG6"/>
                         <outlet property="greenSlider" destination="Q4b-0O-7b0" id="kSX-aj-kik"/>
+                        <outlet property="greenTextField" destination="2ki-7n-Tvc" id="767-Uv-etv"/>
                         <outlet property="redLabel" destination="85z-Lj-jEJ" id="YYn-Sw-pjV"/>
                         <outlet property="redSlider" destination="FHD-Ck-wfK" id="aix-xm-y6z"/>
+                        <outlet property="redTextField" destination="OaL-kN-cJI" id="Wth-ep-LKc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
